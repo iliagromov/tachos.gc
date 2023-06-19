@@ -1,0 +1,76 @@
+@import '../../../styles/_imports'
+
+.testimonials-slider
+    &__toggles
+        display: flex
+        position: absolute
+        top: -51px
+        right: -68px
+        +md-block
+            top: -12%
+            right: -50%
+        .swiper-button-prev
+            left: -11px
+
+        .swiper-button-next
+            right: 0
+    
+    &__btn
+        display: flex
+        position: relative
+        width: 45px
+        height: 45px
+        +md-block
+            width: 64px
+            height: 64px
+        &-prev
+            .page-svg
+                transform: rotate(180deg)
+            
+                
+        &-progress-bar
+            // border: 1px solid $color_orange !important
+            position: absolute
+            left: -1px
+            top: -1px
+            width: 66px
+            height: 66px
+            border-radius: 100%
+            // background: conic-gradient($color_orange 150.6deg, transparent 0deg)
+            transform: rotate(90deg)
+        &_playing
+            .page-btn
+                border: 1px solid rgba($color_orange, .5) !important
+
+        .page-btn
+            display: flex
+            position: relative
+
+            background: #292930
+            border: 1px solid transparent
+            width: 45px
+            height: 45px
+            padding: 0
+            top: 0
+            margin-top: 0
+
+            +md-block
+                width: 64px
+                height: 64px
+            
+            &[disabled]
+                opacity: 1
+                background: #30303F
+                &::after
+                    opacity: 0.35
+            &::after
+                display: flex
+                content: ''
+                // background: url('/images/svg/arrow-right.svg')
+                // background-position: 97.47222222222223% 0
+                // width: 44px
+                // height: 44px
+                // position: absolute
+                // top: 50%
+                // left: 50%
+                // transform: translate(-50%, -50%)

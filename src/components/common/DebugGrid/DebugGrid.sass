@@ -1,0 +1,28 @@
+@import '../../../styles/_imports'
+
+/* __debugGrid__ */
+.debugGrid
+    height: 100vh
+    position: fixed
+    width: 100%
+    
+    .wrapper
+        height: inherit
+        
+    .parentFlex
+        height: inherit
+        +row-flex()
+            
+    .childFlex
+        +col()
+        +size(1)
+        +size-md(1)
+        +size-lg(1)
+        height: inherit
+        outline:  1px solid #ff0
+        background: rgba(0, 0, 0, 0.4)
+    @include debugBtn()
+    &__hidden
+        display: none
+        
+/* __debugGrid__ */

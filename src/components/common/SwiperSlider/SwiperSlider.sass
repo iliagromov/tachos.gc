@@ -1,0 +1,33 @@
+@import '../../../styles/_imports'
+
+.testimonials-slider
+    padding-top: 12px
+    .swiper
+        position: relative
+        left: -32px
+
+        &-wrapper
+            align-items: center
+    &__items
+        min-height: 387px
+        +md-block
+            min-height: 740px
+.testimonialSwiper
+    align-items: center
+    position: relative
+    width: 80%
+    overflow: unset
+    left: -32px
+    +md-block
+        width: 560px
+
+    .swiper-button
+        &-next,
+        &-prev
+            position: absolute
+            top: 0
+            display: flex
+        &-next
+            right: 0
+        &-prev
+            right: 10px

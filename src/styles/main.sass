@@ -1,0 +1,42 @@
+
+
+@import 'imports'
+@import 'fonts'
+@import 'base'
+@import 'page'
+.preloader
+    height: 100%
+    width: 100vw
+    position: fixed
+    top: 0
+    z-index: 9999
+    background: $color_orange
+    text-align: center
+    visibility: visible
+    opacity: 1
+    svg
+        +md-block
+            width: 50% !important
+            transform: scale(1)
+
+.preloaderLoaded
+    visibility: hidden
+    opacity: 0
+    transform: scale(13.5)
+
+    transition: all 1s
+    
+
+.page-body
+    opacity: 0
+    transition: all 0.2s
+
+.contentLoaded
+    opacity: 1
+
+.page-not-found__title
+    color:  $color_orange
+    font-size: 160px
+    line-height: 100%
+    font-weight: bold
+    text-align: center

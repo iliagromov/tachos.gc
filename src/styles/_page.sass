@@ -1,0 +1,189 @@
+
+// по title должен быть mixin
+// есть случай когда на desktop стоит h2    
+// а на мобиле тот же h2 превращается в h3
+// правильно всего это чтобы дизайнер делал правильно
+// Но если диайнер "упоролся", то нужно выходить из ситуации красиво
+// сейчас решаю проблему переопределением title в секции
+  
+.page
+    &-font
+        margin-bottom: 10px
+        &_caveat
+            font-family: Caveat-Regular
+        &_suisse-intl
+            font-family: SuisseIntl-Regular
+        &_sf-mono
+            font-family: SFMono-Regular
+    &-title
+        letter-spacing: 0.0041em
+        font-style: normal
+        font-family: SuisseIntl-Regular
+
+        &-main
+            font-family: SuisseIntl-Regular
+            font-weight: bold
+            margin-bottom: 64px
+            font-weight: 700
+            font-size: 120px
+            line-height: 90%
+            color: $color_black
+        &-h1
+            font-size: 36px
+            line-height: 100%
+
+            &_mobile
+                font-size: 36px
+                line-height: 100%
+
+            +md-block
+                font-size: 64px
+                line-height: 100%
+        &-h2
+            font-size: 24px
+            line-height: 28px
+            &_mobile
+                font-size: 24px
+                line-height: 28px
+            +md-block
+                font-size: 48px
+                line-height: 56px
+        &-h3
+            font-size: 20px
+            line-height: 23px
+            &_mobile
+                font-size: 20px
+                line-height: 23px
+            +md-block
+                font-size: 32px
+                line-height: 37px
+        &-caption
+            font-family: Caveat-Regular
+            color: $color_orange
+            letter-spacing: -0.065em
+
+            &-1
+                font-size: 64px
+                line-height: 50px
+                &_mobile
+                    font-size: 64px
+                    line-height: 50px
+                +md-block
+                    font-size: 130px
+                    line-height: 112px
+            &-2
+                font-size: 42px
+                line-height: 32px
+                &_mobile
+                    font-size: 42px
+                    line-height: 32px
+                +md-block
+                    font-size: 78px
+                    line-height: 68px
+            &-3
+                font-size: 28px
+                line-height: 75%
+                letter-spacing: -0.095em !important
+                &_mobile
+                    font-size: 28px
+                    line-height: 75%
+                +md-block
+                    font-size: 42px
+                    line-height: 75%
+            &-4
+                font-family: SFMono-Regular
+                letter-spacing: -0.0041em
+                font-size: 16px
+                line-height: 120%
+                color: $color_gray
+                &_mobile
+                    font-family: SFMono-Regular
+                    letter-spacing: -0.0041em
+                    font-size: 16px
+                    line-height: 120%
+                    color: $color_gray
+                +md-block
+                    font-size: 20px
+                    line-height: 120%
+
+    &-text
+        font-size: 18px
+        line-height: 120%
+        letter-spacing: -0.0041em
+        &_mobile
+            font-size: 18px
+            line-height: 120%
+        +md-block
+            font-size: 26px
+            line-height: 120%
+
+    &-link
+        display: inline-block
+        font-size: 16px
+        line-height: 19px
+        letter-spacing: -0.02em
+        position: relative
+        // mixin
+        +transitionBase
+
+        &_mobile
+            font-size: 16px !important
+            line-height: 19px !important
+        +md-block
+            font-size: 18px
+            line-height: 21px
+        &_counter
+            position: absolute
+            top: -11px
+            right: -20px
+            font-size: 14px
+        &:hover
+            color: $color_orange
+    &-btn
+        font-family: SFMono-Regular
+        color: $color_white
+        background: $color_black
+        font-size: 18px
+        line-height: 21px
+        padding: 16px 26px
+        border-radius: 40px
+        // mixin
+        +transitionBase
+        &:hover
+            background: $color_orange
+        &:active
+            background: $color_orange
+    &-svg
+        display: flex
+        svg
+            width: 100%
+            height: 100%
+    &-picture
+        display: flex
+    &_bold
+        font-weight: bold
+    &_bg-color
+        &_orange
+            background-color: $color_orange
+        &_white
+            background-color: $color_white
+        &_black
+            background-color: $color_black
+        &_gray
+            background-color: $color_gray
+        &_light-gray
+            background-color: $color_light-gray
+    &_mb-120 
+        margin-bottom: 120px
+    &_mb-64
+        margin-bottom: 64px
+    &_mb-42
+        margin-bottom: 42px
+    &_mb-32
+        margin-bottom: 32px
+    &_mb-16
+        margin-bottom: 16px
+    &_mb-12
+        margin-bottom: 12px
+    &_mb-4
+        margin-bottom: 4px

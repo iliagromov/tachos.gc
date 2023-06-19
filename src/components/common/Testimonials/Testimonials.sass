@@ -1,0 +1,107 @@
+@import '../../../styles/_imports'
+
+/*testimonials*/
+.testimonials
+
+    padding-top: 42px
+
+    +md-block
+        padding-top: 110px
+    .wrapper
+        +to($break_sm)
+            padding: 0
+
+        // 
+        max-width: 100%
+        padding: 0
+    .page-title
+        color: $color_white
+        &-h1
+            +to($break_sm)
+                font-size: 32px
+
+        &-h3
+            line-height: 100%
+
+            +md-block
+                font-size: 42px
+    .page-title-caption-3
+        letter-spacing: -0.05em !important
+        padding-top: 10px
+
+    &-inner
+        overflow: hidden
+        background-color: $color_black
+
+        border-radius: 26px
+        padding: 71px 20px 48px
+        +md-block
+            padding: 80px 60px 40px
+
+
+    &__steps
+        padding-top: 8%
+        &-title
+
+            position: relative
+            +md-block
+                width: 80%
+            &_marker-after
+                position: absolute
+                display: flex
+                width: 100%
+                height: 100%
+                background-repeat: no-repeat
+
+                max-width: 255px
+
+                max-height: 214px
+                top: 30%
+                right: 0
+                transform: rotate(342deg)
+                +md-block
+                    max-width: 507px
+                    max-height: 305px
+                    top: -24%
+                    right: -27%
+        .page-title
+            line-height: 105%
+
+    &-steps
+        display: flex
+        flex-wrap: wrap
+        +md-block
+            flex-wrap: nowrap
+        padding-top: 9%
+        &__nav
+            display: flex
+            flex-direction: column
+            +size(12)
+            +size-md(4.5)
+            +shift-md-right(1.5)
+            .page-text
+                cursor: pointer
+                color: $color_white
+                opacity: 0.4
+                border-bottom: 3px solid rgba($color_white, .2)
+                +transitionBase
+                padding-bottom: 30px
+                margin-bottom: 30px
+                &.isActive
+                    opacity: 1
+                    border-bottom: 3px solid rgba($color_white, 1)
+        &__contents
+
+            align-items: center
+            justify-content: center
+            display: none
+            +md-block
+                display: flex
+            +size(12)
+            +size-md(6)
+        &__content
+            // visibility: hidden
+            display: none
+            &.isActive
+                display: flex
+                // visibility: visible

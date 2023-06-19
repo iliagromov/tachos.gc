@@ -1,0 +1,165 @@
+@import '../../../styles/_imports'
+
+/*projects*/
+.projects
+    padding: 0
+    &-inner
+        +row-flex
+        +md-block
+            padding: 10px 40px
+.project
+    &-card
+        +col
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+        padding-top: 64px
+
+        &__img
+            overflow: hidden
+            border-radius: 26px
+            // FIXME: max-height
+            max-height: 580px
+
+            +to($break_sm)
+                width: 335px
+                height: 360px
+                
+        &__text
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            box-sizing: border-box
+
+        &__title
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+            padding-top: 20px
+            &-box
+                width: 100%
+
+            .page-title
+                font-size: 40px
+                line-height: 46px
+
+        &__subtitle
+            padding-top: 4px
+            .page-title-caption-3
+                font-size: 42px
+
+        &__description
+            padding-top: 31px
+            .page-text
+                font-size: 20px
+
+        &:hover
+            .project-card__img
+                .page-picture
+                    transform: scale(1.2)
+
+        &:nth-child(3),
+        &:nth-child(5)
+            .project-card
+                &__img
+                    margin-bottom: 30px
+                    +md-block
+                        margin-bottom: 0
+        +md-block
+            &:first-child,
+            &:last-child
+                flex-direction: row
+                .project-card
+                    &__title
+                        flex-direction: column
+                        align-items: flex-start
+                        padding-top: 0
+
+                        .page-title
+                            padding-top: 25px
+                            
+                        .project-card__date
+                            order: 0
+
+                        .page-title-h2
+                            order: 1
+
+                    &__text
+                        +size(12)
+                        +size-md(3.8)
+                        flex-direction: column
+                        padding: 0 35px 0px 12px
+
+                    &__img
+                        +size(12)
+                        +size-md(8.2)
+                    &__description
+                        padding-top: 0
+
+            
+            &:nth-child(2)
+                +size-md(6)
+                +shift-md-right(1)
+                
+            &:nth-child(3)
+                +size-md(5)
+                padding-left: 7px
+
+            // ~50% card
+            &:nth-child(2),
+            &:nth-child(3)
+                .project-card
+                    &__img
+                        +size-md(12)
+                        margin-bottom: 30px
+                        +md-block
+                            margin-bottom: 0
+
+            // -full card            
+            &:nth-child(4)
+                // 
+                .project-card
+                    &__title
+                        padding-top: 0
+                    &__img
+                        +size-md(12)
+
+                    &__text
+                        +size-md(12)
+                        flex-direction: row
+                        align-items: flex-start
+                        padding: 20px 0 0
+
+                        .project-card__title-box
+                            width: 28%
+                            
+                    &__description
+                        width: 28%
+
+            // -50% card            
+            &:nth-child(5)
+                +size-md(5)
+                +shift-md-right(1)
+
+                .project-card
+                    &__description
+                        width: 70%
+
+            &:nth-child(6)
+                +size-md(6)
+                .project-card
+                    &__description
+                        width: 70%
+
+            &:nth-child(7)
+                +size-md(4)
+                margin: 0 auto
+                padding-top: 63px
+                position: relative
+                right: -17px
+
+                .project-card
+                    &__text
+                        padding-right: 30px
+                    &__description
+                        padding-top: 44px

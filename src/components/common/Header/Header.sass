@@ -1,0 +1,119 @@
+@import '../../../styles/_imports'
+
+.header
+    position: sticky
+    top: 0
+    z-index: 1000
+    padding: 18px 0 20px
+    background: #FFFFFF
+    &-inner
+        +row-flex()
+        align-items: center
+        justify-content: space-between
+        position: relative
+    &__logo
+        +col
+        z-index: 20
+
+        .page-link
+            display: flex
+
+    &__nav
+        +md-block
+            position: absolute
+            top: 50%
+            transform: translateY(-70%)
+            width: 100%
+        &_desktop
+            display: none
+            +md-block
+                display: block
+                top: 16px
+                text-align: center
+                z-index: 10
+        &_mobile
+            +md-block
+                display: none
+
+    &__action
+        z-index: 20
+
+      
+        +to($break_md)
+            position: fixed
+            right: 20px
+            bottom: 20px
+
+        +md-block
+            display: block
+
+        .page-btn
+            font-size: 16px
+            line-height: 19px
+
+        &_desktop
+            display: none
+            +md-block
+                display: block
+        &_mobile
+            +md-block
+                display: none
+
+.nav-menu
+    .page-link
+        margin: 0 14px
+        font-size: 16px
+        line-height: 19px
+.menu
+    +to($break_md)
+        position: fixed
+        z-index: 9999
+        top: 71px
+        left: 0
+        bottom: 0
+        right: 0
+        padding: 36px 0 20px
+
+        visibility: hidden
+        opacity: 0
+        background-color: #fff
+        transition: all 0.2s
+        +sm-block
+            padding: 75px 0 20px
+
+    +md-block
+        display: none
+
+    .wrapper
+        height: 100%
+    &-inner
+
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+        height: 100%
+
+    &__list
+        flex-grow: 1
+        .menu-list
+            display: flex
+            flex-direction: column
+            .page-link
+                font-size: 30px
+                line-height: 120%
+                margin-bottom: 34px
+                +sm-block
+                    font-size: 40px
+                    line-height: 120%
+                // FIXME: width
+                &_project
+                    width: 128px
+                    +sm-block
+                        width: 170px
+
+    &__footer
+        align-self: flex-end
+
+.navShowed
+    visibility: visible
+    opacity: 1

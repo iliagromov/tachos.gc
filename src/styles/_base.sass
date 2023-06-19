@@ -1,0 +1,78 @@
++reset()
+/* __reset__ */
+/* __base__ */
+//   font-family: var(--font-family,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,))
+// --fallback-fonts: Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic;
+// scrollbar-color: hsla(0,0%,100%,.3) transparent;
+// font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,));
+// font-size: 0.875rem;
+
+// $fallback-fonts: Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic;
+
+.wrapper
+  +wrapper()
+
+@font-face 
+  +font($font, $fontBold)
+
+@font-face 
+  +font($font, $fontRegular)
+  
+@font-face 
+  +font(SFMono, SFMono-Regular)
+
+@font-face 
+  +font(Caveat, Caveat-Regular)
+
+@font-face 
+  +font(SuisseIntl, SuisseIntl-Regular)
+
+@font-face 
+  +font(SuisseIntl, SuisseIntl-Regular)
+
+
++scrollbar($color_scrollbar-track, $color_scrollbar-thumb)
+
+html
+  scrollbar-color: $color_orange #fff
+  scrollbar-width: auto
+  &:not([data-scroll='0']) 
+    // header
+    //   background: rgba(2, 2, 2, 0.4)
+    //   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1)
+  
+
+body 
+  font-family: SFMono-Regular
+  // font-family: $fallback-fonts,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva
+  color: $color_black
+  background: #000
+  // margin: 0
+
+.page
+  background: $color_white
+.footer
+  background: $color_white
+.font-cursive
+  font-family: cursive
+
+a, button
+  font-family: SFMono-Regular
+  cursor: pointer
+  color: inherit
+  text-decoration: none
+ 
+  &:focus
+      outline: none
+  
+button
+  border: none
+  background-color: transparent
+  letter-spacing: -0.02em
+
+input
+  cursor: text
+  &:focus
+      outline: none
+
+/* __base__ */

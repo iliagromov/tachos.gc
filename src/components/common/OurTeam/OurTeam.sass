@@ -1,0 +1,49 @@
+@import '../../../styles/_imports'
+
+/*our-team*/
+.our-team
+    padding: 48px 0
+    .page-title
+        text-align: center
+        +to($break_sm)
+            font-size: 32px
+    .wrapper
+        +to($break_sm)
+            padding: 0
+    &-inner
+        position: relative
+        background: $color_light-gray
+        background: linear-gradient(180deg, #F6F5F0 30%, #15151E 49.14%)
+        border-radius: 26px
+        padding: 65px 0 33px
+        +md-block
+            padding: 83px 0 33px
+
+    &__info
+        position: relative
+        top: 33%
+
+        border-radius: 26px
+
+    &__img
+
+        display: flex
+        justify-content: center
+        // margin-left: -24px
+        padding-top: 30px
+        +md-block   
+            padding-top: 42px
+
+    &__some-text
+        padding: 32% 0 0
+        +md-block
+            padding: 4% 8%
+        text-align: center
+        .page-title-caption
+
+            display: inline-block
+            transform: rotate(-2.85deg)
+            letter-spacing: -0.05em
+            margin: 9px 2px
+            +md-block
+                margin: 13px 20px
