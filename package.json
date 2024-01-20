@@ -4,9 +4,6 @@
   "private": true,
   "description": "tachos",
   "author": "iliagromov",
-  "engines": {
-    "node": "18.16.0"
-  },
   "keywords": [
     "gatsby"
   ],
