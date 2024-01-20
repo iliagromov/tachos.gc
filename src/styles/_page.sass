@@ -5,7 +5,7 @@
 // правильно всего это чтобы дизайнер делал правильно
 // Но если диайнер "упоролся", то нужно выходить из ситуации красиво
 // сейчас решаю проблему переопределением title в секции
-  
+
 .page
     &-font
         margin-bottom: 10px
@@ -18,7 +18,7 @@
     &-title
         letter-spacing: 0.0041em
         font-style: normal
-        font-family: SuisseIntl-Regular
+        font-family: OpenSans
 
         &-main
             font-family: SuisseIntl-Regular
@@ -118,6 +118,7 @@
             line-height: 120%
 
     &-link
+        cursor: pointer
         display: inline-block
         font-size: 16px
         line-height: 19px
@@ -135,12 +136,12 @@
         &_counter
             position: absolute
             top: -11px
-            right: -20px
+            right: -10px
             font-size: 14px
         &:hover
             color: $color_orange
     &-btn
-        font-family: SFMono-Regular
+        font-family: OpenSans
         color: $color_white
         background: $color_black
         font-size: 18px
@@ -173,7 +174,7 @@
             background-color: $color_gray
         &_light-gray
             background-color: $color_light-gray
-    &_mb-120 
+    &_mb-120
         margin-bottom: 120px
     &_mb-64
         margin-bottom: 64px

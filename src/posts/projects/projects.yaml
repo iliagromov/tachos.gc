@@ -1,0 +1,71 @@
+- meta:
+    id: 1
+    category: projects
+    url: project1
+    date: "2022"
+  image2: ../../images/project-1-bg.png
+  image: ../../images/project-1-app.png
+  title: "Maginary"
+  subtitle: "Иммерсивная книга "
+  description: "Иммерсивная книга, механики дополненной реальност."
+  aboutStack: "Язык программирования Swift. Использовали системы работы с анимациями React."
+  articleLinks:
+    - title: "Medium:"
+      text: "Maginary — анимированная книга-игра для iOS, "
+      href: "href"
+    - title: "GoPractice:"
+      text: "Maginary. История создания магической книги с цифрами и инсайтами, "
+      href: "href"
+    - title: "AppStore featuring:"
+      text: "GAME OF THE DAY. The inventive Maginary is no ordinary book."
+      href: "href"
+  appstore: "appstore"
+  googleplay: "googleplay"
+
+- meta:
+    id: 2
+    category: projects
+    url: project2
+    date: "2022"
+  image2: ../../images/project-2-bg.png
+  image: ../../images/project-2-app.png
+  title: "Хайс Банк"
+  subtitle: "Банк для предпринимателей"
+  description: "Иммерсивная книга, механики дополненной реальност."
+  aboutStack: "Язык программирования Swift. Использовали системы работы с анимациями React."
+  articleLinks:
+    - title: "Medium:"
+      text: "Maginary — анимированная книга-игра для iOS, "
+      href: "href"
+    - title: "GoPractice:"
+      text: "Maginary. История создания магической книги с цифрами и инсайтами, "
+      href: "href"
+    - title: "AppStore featuring:"
+      text: "GAME OF THE DAY. The inventive Maginary is no ordinary book."
+      href: "href"
+  appstore: "appstore"
+  googleplay: "googleplay"
+
+- meta:
+    id: 3
+    category: projects
+    url: project3
+    date: "2022"
+  image2: ../../images/project-3-bg.png
+  image: ../../images/project-3-app.png
+  title: "Складно"
+  subtitle: "Умный сервис хранения вещей"
+  description: "Иммерсивная книга, механики дополненной реальност."
+  aboutStack: "Язык программирования Swift. Использовали системы работы с анимациями React."
+  articleLinks:
+    - title: "Medium:"
+      text: "Maginary — анимированная книга-игра для iOS, "
+      href: "href"
+    - title: "GoPractice:"
+      text: "Maginary. История создания магической книги с цифрами и инсайтами, "
+      href: "href"
+    - title: "AppStore featuring:"
+      text: "GAME OF THE DAY. The inventive Maginary is no ordinary book."
+      href: "href"
+  appstore: "appstore"
+  googleplay: "googleplay"

@@ -1,0 +1,83 @@
+@import '../../../styles/_imports'
+/*footer*/
+.draw-container
+  position: relative
+  width: 300px
+  height: 500px
+  border: 1px solid
+
+.draw-container .image
+  position: absolute
+  display: block
+  width: 10px
+  height: 10px
+  background-color: #f00
+
+.footer
+  padding: 60px 0 0
+  overflow: hidden
+
+  +md-block
+    padding: 130px 0 0
+  &-inner
+    position: relative
+  &__slogan
+    position: relative
+    &-main
+      position: relative
+      z-index: 10
+      .page-svg
+        align-items: center
+        justify-content: center
+    &-fire
+      position: absolute
+      z-index: 1
+      top: -41px
+      right: 0px
+
+      +md-block
+        top: -74px
+        right: 65px
+
+      .page-svg
+        width: 64px
+        +md-block
+          width: 100%
+  &__feedback
+    position: relative
+    bottom: -5px
+    +to($break_sm)
+      margin-top: 30px
+    +md-block
+      position: absolute
+      left: 128px
+  &__nav
+
+    +to($break_sm)
+      order: 0
+      width: 100%
+      margin-bottom: 18px
+      .nav
+        display: flex
+        position: relative
+        z-index: 10
+
+        +to($break_sm)
+          flex-direction: column
+        .page-link
+          margin: 12px 0
+          +md-block
+            margin: 0 13px
+  &__city
+    +to($break_sm)
+      order: 1
+  &__author
+    +to($break_sm)
+      order: 2
+  &__row
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-top: 8%
+    +md-block
+      padding-top: 18%

@@ -1,23 +1,16 @@
 import * as React from "react";
-import { Link, PageProps, useStaticQuery } from "gatsby";
-import { graphql } from "gatsby";
-import { BannerComponent } from "../../common/Banner/Banner";
-import { ProjectsComponent } from "../../common/Projects/Projects";
-import { TestimonialsComponent } from "../../common/Testimonials/Testimonials";
+import { PageProps } from "gatsby";
 import { OurStackComponent } from "../../common/OurStack/OurStack";
-import { OurTeamComponent } from "../../common/OurTeam/OurTeam";
+import { BannerComponent } from "../../common/BannerMain/BannerMain";
+import { Projects2 } from "../../common/Projects2/Projects2";
 
 const PageMainContainer: React.FC<PageProps> = (props) => {
-
-
   return (
     <>
       <BannerComponent />
-      <ProjectsComponent />
-      <TestimonialsComponent />
       <OurStackComponent />
-      <OurTeamComponent />
+      <Projects2 />
     </>
-  )
-}
+  );
+};
 export { PageMainContainer };

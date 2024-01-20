@@ -6,35 +6,35 @@
 
 // You can delete this file if you're not using it
 
-const path = require('path');
+// const path = require('path');
 
-exports.createPages = async ({ graphql, actions: { createPage }  }) => {
+// exports.createPages = async ({ graphql, actions: { createPage }  }) => {
 
-    const { data } =  await graphql(`
-       {
-        allMarkdownRemark {
-            nodes {
-            frontmatter {
-                category
-                url
-            }
-            }
-        }
-       }
-     `);
-    
-    data.allMarkdownRemark.nodes.forEach(node => {
-        const { url, category} = node.frontmatter;
-        createPage({
-          path: `${category}/${url}`,
-          component: path.resolve(`./src/templates/page-single-project.tsx`),
-          context: {
-            // This is the $slug variable passed to blog-post.js
-            url: url,
-            slug: url,
-            category: category,
-          },
-        });
-    });
+//     const { data } =  await graphql(`
+//        {
+//         allMarkdownRemark {
+//             nodes {
+//             frontmatter {
+//                 category
+//                 url
+//             }
+//             }
+//         }
+//        }
+//      `);
 
-}
+//     data.allMarkdownRemark.nodes.forEach(node => {
+//         const { url, category} = node.frontmatter;
+//         createPage({
+//           path: `${category}/${url}`,
+//           component: path.resolve(`./src/templates/page-single-project.tsx`),
+//           context: {
+//             // This is the $slug variable passed to blog-post.js
+//             url: url,
+//             slug: url,
+//             category: category,
+//           },
+//         });
+//     });
+
+// }

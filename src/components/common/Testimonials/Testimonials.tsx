@@ -1,11 +1,22 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { StaticImage } from "gatsby-plugin-image"
-
-import './Testimonials.sass';
 import { SwiperSliderComponent } from '../SwiperSlider/SwiperSlider';
 
-const TestimonialsComponent: FC = () => {
+import './Testimonials.sass';
+import 'react-tabs/style/react-tabs.css';
+const CustomTab = (props) => {
+    return (
+        <Tab>
+            <h1 onMouseEnter={props.onHover}>{props.children}</h1>
+        </Tab>
+        );
+    };
+    
+CustomTab.tabsRole = 'Tab';
 
+const TestimonialsComponent: FC = () => {
+    const [tabIndex, setTabIndex] = useState(0);
    
     return (
         <section className="testimonials">
@@ -24,33 +35,41 @@ const TestimonialsComponent: FC = () => {
 
                             </div>
                         </div>
-                        <div className="testimonials-steps">
-                            <div className="testimonials-steps__nav">
-                                <div className="tab-link page-text isActive">Выстраиваем <br />процесс разработки </div>
-                                <div className="tab-link page-text">Проводим <br />технический аудит</div>
-                                <div className="tab-link page-text">Запускаем с нуля, <br />поддерживаем и развиваем</div>
-                                <div className="tab-link page-text">Консультируем как лушче <br />запустить продукт, фичу, на
-                                    каких технологиях</div>
-                            </div>
+                        
+                            <Tabs className="testimonials-steps">
+                                <TabList className="testimonials-steps__nav">
+                                    <Tab className="tab-link page-text ">Выстраиваем <br />процесс разработки </Tab>
+                                    <Tab className="tab-link page-text">Проводим <br />технический аудит</Tab>
+                                    <Tab className="tab-link page-text">Запускаем с нуля, <br />поддерживаем и развиваем</Tab>
+                                    <Tab className="tab-link page-text">Консультируем как лушче <br />запустить продукт, фичу, на
+                                        каких технологиях</Tab>
+                                </TabList>
                             <div className="testimonials-steps__contents">
-                                <div className="testimonials-steps__content isActive">
+                               
+                                <TabPanel className="testimonials-steps__content ">
                                     <StaticImage
                                      src={'../../../assets/images/png/testimonial-steps.png'} alt={'img'} />
-                                </div>
-                                <div className="testimonials-steps__content">
+                                </TabPanel>
+                              
+                                <TabPanel className="testimonials-steps__content ">
+                                    <StaticImage
+                                     src={'../../../assets/images/png/testimonial-steps-1.png'} alt={'img'} />
+                                </TabPanel>
+                                
+                                <TabPanel className="testimonials-steps__content ">
                                     <StaticImage
                                      src={'../../../assets/images/png/testimonial-steps.png'} alt={'img'} />
-                                </div>
-                                <div className="testimonials-steps__content">
+                                </TabPanel>
+                                
+                                <TabPanel className="testimonials-steps__content ">
                                     <StaticImage
-                                     src={'../../../assets/images/png/testimonial-steps.png'} alt={'img'} />
-                                </div>
-                                <div className="testimonials-steps__content">
-                                    <StaticImage
-                                     src={'../../../assets/images/png/testimonial-steps.png'} alt={'img'} />
-                                </div>
+                                     src={'../../../assets/images/png/testimonial-steps-1.png'} alt={'img'} />
+                                </TabPanel>
+
+                                
                             </div>
-                        </div>
+
+                            </Tabs>
                     </div>
                 </div>
             </div>

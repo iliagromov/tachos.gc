@@ -21,8 +21,6 @@ const TestimonialItem: FC<TestimonialItemProps> = (props) => {
                     
                 </div>
                 <div className="testimonials-slide__img-video">
-                   
-
                     <div className="testimonials-slide__img-video-btn-play">
                         <div id="timer"></div><button className="page-btn" aria-label="Play"
                             role="button">►</button>

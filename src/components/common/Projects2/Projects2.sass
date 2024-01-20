@@ -1,0 +1,193 @@
+@import '../../../styles/_imports'
+.projects
+    padding: 80px 0
+    .page-title
+        line-height: normal
+        +to($break_sm)
+            font-size: 32px
+
+        +md-block
+            text-align: center
+            font-size: 60px
+
+.apps__list
+    list-style: none
+    margin-top: 2.2rem
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+
+.apps__item
+    margin-top: 2.2rem
+
+    // &_animation
+    //     opacity: 0
+    //     -webkit-transition: opacity .6s ease-in, -webkit-transform 0.6s
+    //     transition: opacity .6s ease-in, -webkit-transform 0.6s
+    //     transition: opacity .6s ease-in, transform 0.6s
+    //     transition: opacity .6s ease-in, transform 0.6s, -webkit-transform 0.6s
+    //     -webkit-transform: translateY(0.5rem)
+    //     transform: translateY(0.5rem)
+
+    // &.animated
+    //     opacity: 1
+    //     -webkit-transform: translateY(0)
+    //     transform: translateY(0)
+
+.item-apps
+    background-color: #fff
+    border-radius: 1.2rem
+    overflow: hidden
+    box-shadow: 0.15rem 0.35rem 0.5rem rgba(0, 0, 0, 0.25)
+    -webkit-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+    text-align: center
+    margin-bottom: 50px
+
+    @media (min-width: 576px)
+        text-align: left
+
+    @media (min-width: 768px)
+        display: -webkit-box
+        display: flex
+
+    &:hover
+        -webkit-transform: translateY(-0.25rem)
+        transform: translateY(-0.25rem)
+        box-shadow: 0.15rem 0.6rem 0.75rem rgba(0, 0, 0, 0.25)
+    &__bg
+        background-color: #ECECEC
+        // padding: 0.5rem 0.75rem
+        height: 20rem
+        overflow: hidden
+
+        @media (min-width: 768px)
+            height: auto
+
+            flex-shrink: 0
+            width: 11rem
+            // display: -webkit-box
+            // display: flex
+            -webkit-box-pack: center
+            justify-content: center
+            -webkit-box-align: center
+            align-items: center
+            -webkit-box-orient: vertical
+            -webkit-box-direction: normal
+            flex-direction: column
+        @media (min-width: 992px)
+            width: 16.5rem
+    &__content
+        width: 100%
+        padding: 1.4rem 1rem
+        @media (min-width: 576px)
+            display: -webkit-box
+            display: flex
+            flex-wrap: wrap
+            padding: 1.4rem 2.5rem
+
+        @media (min-width: 768px)
+            flex-basis: 0
+            -webkit-box-flex: 1
+            flex-grow: 1
+            max-width: 100%
+    &__icon
+        display: flex
+
+    &__text
+        display: flex
+        flex-grow: 1
+        width: 100%
+        &-box
+            display: flex
+            flex-direction: column
+            margin-left: 20px
+    &__title
+        font-weight: 700
+        font-size: 1.4rem
+        @media (min-width: 768px)
+            font-size: 2.1rem
+    &__descr
+        @media (min-width: 768px)
+            font-size: 1.2rem
+    &__links
+        padding: 1.4rem 1rem
+
+        &-list
+            display: -webkit-box
+            display: flex
+            -webkit-box-orient: horizontal
+            -webkit-box-direction: normal
+            flex-flow: row wrap
+            -webkit-box-align: center
+            align-items: center
+            -webkit-box-pack: center
+            justify-content: center
+            margin: -0.5rem 0 0 -1rem
+
+            @media (min-width: 576px)
+                margin: -1rem 0 0 -1rem
+
+            @media (min-width: 768px)
+                display: block
+    &__link
+        display: block
+        -webkit-transition: opacity 0.2s
+        transition: opacity 0.2s
+        margin: 0.5rem 0 0 1rem
+        font-size: 2.55rem
+        @media (min-width: 576px)
+            margin: 1rem 0 0 1rem
+
+        &:hover
+            opacity: 0.8
+
+        svg
+            display: block
+            width: 2.98em
+            height: 1em
+        img
+            display: block
+            width: 2.98em
+            height: auto
+    &__stack
+        margin: 0.94rem 0 0 0
+        &-title
+            font-weight: 600
+            font-size: 1rem
+        &-text
+            font-size: 0.75rem
+    &__add
+        &-links
+            font-size: 0.75rem
+            margin: 0.94rem 0 0 0
+            &-title
+                font-weight: 600
+                font-size: 1rem
+        &-link
+            display: inline-block
+            color: #0070c9
+            fill: #0070c9
+            margin: 0.31rem 0 0 0.63rem
+            &:hover
+                text-decoration: underline
+            svg
+                font-size: 0.5rem
+    &__show-more
+
+        margin-top: 20px
+        width: 100%
+        text-align: center
+        .page-link
+            font-size: 0.95rem
+            +sm-block
+                display: flex
+                align-items: center
+                justify-content: center
+            &.js-open
+                .page-svg
+                    transform: rotate(180deg)
+
+            .page-svg
+                margin-top: 2px
+                margin-left: 10px

@@ -38,13 +38,10 @@ const SwiperSlideComponent: FC<SwiperSlideComponentProps> = ({
                     <div className="testimonials-slide__img-poster">
                         <GatsbyImage image={image} alt={'img'} />
                     </div>
-                    <div className="testimonials-slide__img-video">
-                            <CustomPlayer 
+                    <CustomPlayer 
                             video={video}
                             iconBtn={iconPlay.publicURL}
-                        />
-                        
-                    </div>
+                    />
                 </div>
                 <div className="testimonials-slide__name">
                     <h3 className="page-title page-title-h3">{testimonial.title}</h3>

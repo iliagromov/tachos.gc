@@ -5,47 +5,56 @@
     padding: 43px 0 110px
     +md-block
         padding: 117px 0
-        
+
     .page-title
+        line-height: normal
         +to($break_sm)
             font-size: 32px
 
         +md-block
             text-align: center
+            font-size: 60px
+
     &-inner
         &__items
             position: relative
             display: flex
             flex-wrap: wrap
             padding: 64px 31px
-            margin: 0 -10px 
+            margin: 0 -10px
             +md-block
                 flex-wrap: nowrap
-                margin: 0 -20px 
+                margin: 0 -20px
         &__item
-           
+
             cursor: pointer
             margin: 0 10px 10px
             +to($break_sm)
                 width: calc(25% - 20px)
             +md-block
                 margin: 0 20px
-            
+
             &-img
                 +transitionBase
                 filter: grayscale(100%)
             &-text
-                visibility: hidden
+                // visibility: hidden
+                font-family: OpenSans
                 opacity: 0
                 position: absolute
                 width: 77%
                 text-align: center
                 bottom: -40%
                 left: 50%
-                +md-block
-                    bottom: -13%
+
                 transform: translateX(-50%)
                 +transitionBase
+                +md-block
+                    bottom: -23%
+            &:first-child
+                .our-stack-inner__item-text
+                    opacity: 1
+
             &:hover
                 .our-stack-inner__item
                     &-text

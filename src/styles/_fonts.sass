@@ -1,8 +1,6 @@
-@mixin font($font, $fontName, $urlName: $fontName, $weight: normal, $style: normal) 
-    font-family: '#{$fontName}'
-    src: url('../assets/fonts/#{$font}/#{$urlName}.ttf') format("opentype")
-  
+
+@mixin font($font, $fontName, $weight: normal )
+    font-family: $font
+    src: local("#{$font} #{$fontName}"), url("../assets/fonts/#{$font}/#{$font}-#{$fontName}.ttf") format("opentype")
     font-weight: #{$weight}
-    font-style: #{$style}
-    font-display: swap
-    
+    font-style: normal

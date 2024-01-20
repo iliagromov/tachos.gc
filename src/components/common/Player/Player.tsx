@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 
 import { Player, ControlBar } from 'video-react';
 
-import { graphql, useStaticQuery } from 'gatsby';
 import { ReactSVG } from 'react-svg';
 
 import './Player.sass';
-import { useSwiper } from 'swiper/react';
 
 const sources = {
   sintelTrailer: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
@@ -86,7 +84,7 @@ export default class CustomPlayer extends Component<CustomPlayerProps> {
         source: this.props.video,
         loop: true,
         isActive: false,
-        autoPlay: false,
+        autoPlay: true,
         muted: true,
         player: {}
     };
@@ -139,13 +137,14 @@ export default class CustomPlayer extends Component<CustomPlayerProps> {
     // console.log(this.state.player);
     
     return (
-      <div>
+      <div  className="testimonials-slide__img-video">
         <Player
           ref={player => {
             this.player = player;
           }}
           autoPlay={true}
           muted={this.state.muted}
+          height={400}
         >
           <source src={this.state.source} />
         </Player>

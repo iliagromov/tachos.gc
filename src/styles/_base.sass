@@ -12,38 +12,43 @@
 .wrapper
   +wrapper()
 
-@font-face 
-  +font($font, $fontBold)
+@font-face
+  +font(OpenSans, Regular, 400)
 
-@font-face 
-  +font($font, $fontRegular)
-  
-@font-face 
-  +font(SFMono, SFMono-Regular)
+@font-face
+  +font(OpenSans, Light, 500)
 
-@font-face 
-  +font(Caveat, Caveat-Regular)
+@font-face
+  +font(OpenSans, Semibold, 600)
 
-@font-face 
-  +font(SuisseIntl, SuisseIntl-Regular)
+@font-face
+  +font(OpenSans, Bold, 700)
 
-@font-face 
-  +font(SuisseIntl, SuisseIntl-Regular)
+// @font-face 
+//   +font(SFMono, SFMono-Regular)
 
+// @font-face 
+//   +font(Caveat, Caveat-Regular)
+
+// @font-face 
+//   +font(SuisseIntl, SuisseIntl-Regular)
+
+// @font-face 
+//   +font(SuisseIntl, SuisseIntl-Regular)
 
 +scrollbar($color_scrollbar-track, $color_scrollbar-thumb)
 
 html
   scrollbar-color: $color_orange #fff
   scrollbar-width: auto
-  &:not([data-scroll='0']) 
+  &:not([data-scroll='0'])
     // header
     //   background: rgba(2, 2, 2, 0.4)
     //   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1)
-  
 
-body 
-  font-family: SFMono-Regular
+body
+  font-family: OpenSans
+  font-weight: 400
   // font-family: $fallback-fonts,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva
   color: $color_black
   background: #000
@@ -57,14 +62,14 @@ body
   font-family: cursive
 
 a, button
-  font-family: SFMono-Regular
+  font-family: OpenSans
   cursor: pointer
   color: inherit
   text-decoration: none
- 
+
   &:focus
-      outline: none
-  
+    outline: none
+
 button
   border: none
   background-color: transparent
@@ -73,6 +78,6 @@ button
 input
   cursor: text
   &:focus
-      outline: none
+    outline: none
 
 /* __base__ */
