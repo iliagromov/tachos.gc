@@ -1,10 +1,14 @@
 // const { resolve } = require(`path`)
 // const { platform } = require(`os`)
 const siteMetadata = require("./src/data/siteMetadata");
+import adapter from "gatsby-adapter-netlify";
 
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  adapter: adapter({
+    excludeDatastoreFromEngineFunction: false,
+  }),
   siteMetadata,
   flags: {
     // FAST_DEV: true,
