@@ -1,0 +1,55 @@
+- meta:
+    id: 1
+    category: stacks
+  imageBg: ../../images/technology-1.svg
+  title: "Flutter"
+  description: "используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений."
+
+- meta:
+    id: 2
+    category: stacks
+  imageBg: ../../images/technology-2.svg
+  title: "Flutter"
+  description: "используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений."
+
+- meta:
+    id: 3
+    category: stacks
+  imageBg: ../../images/technology-3.svg
+  title: "Flutter"
+  description: "используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений."
+
+- meta:
+    id: 4
+    category: stacks
+  imageBg: ../../images/technology-4.svg
+  title: "Flutter"
+  description: "используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений."
+
+- meta:
+    id: 5
+    category: stacks
+  imageBg: ../../images/technology-5.svg
+  title: "Flutter"
+  description: "используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений."
+
+- meta:
+    id: 6
+    category: stacks
+  imageBg: ../../images/technology-6.svg
+  title: "Flutter"
+  description: "используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений."
+
+- meta:
+    id: 7
+    category: stacks
+  imageBg: ../../images/technology-7.svg
+  title: "Flutter"
+  description: "используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений."
+
+- meta:
+    id: 8
+    category: stacks
+  imageBg: ../../images/technology-8.svg
+  title: "Flutter"
+  description: "используется разработчиками для создания бесшовной сплоченности при разработке кроссплатформенных мобильных приложений."

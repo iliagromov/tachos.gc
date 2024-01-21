@@ -3,7 +3,8 @@
     category: projects
     url: project1
     date: "2022"
-  image2: ../../images/project-1-bg.png
+  imageBgMob: ../../images/project-1-bg-mob.png
+  imageBg: ../../images/project-1-bg.png
   image: ../../images/project-1-app.png
   title: "Maginary"
   subtitle: "Иммерсивная книга "
@@ -27,7 +28,8 @@
     category: projects
     url: project2
     date: "2022"
-  image2: ../../images/project-2-bg.png
+  imageBgMob: ../../images/project-2-bg-mob.png
+  imageBg: ../../images/project-2-bg.png
   image: ../../images/project-2-app.png
   title: "Хайс Банк"
   subtitle: "Банк для предпринимателей"
@@ -51,7 +53,8 @@
     category: projects
     url: project3
     date: "2022"
-  image2: ../../images/project-3-bg.png
+  imageBgMob: ../../images/project-3-bg-mob.png
+  imageBg: ../../images/project-3-bg.png
   image: ../../images/project-3-app.png
   title: "Складно"
   subtitle: "Умный сервис хранения вещей"

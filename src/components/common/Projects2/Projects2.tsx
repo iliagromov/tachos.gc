@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import "./Projects2.sass";
 import { ReactSVG } from "react-svg";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image";
 import classNames from "classnames";
 
 type ProjectsItem = {
@@ -14,7 +14,12 @@ type ProjectsItem = {
       gatsbyImageData: any;
     };
   };
-  image2: {
+  imageBg: {
+    childImageSharp: {
+      gatsbyImageData: any;
+    };
+  };
+  imageBgMob: {
     childImageSharp: {
       gatsbyImageData: any;
     };
@@ -63,23 +68,32 @@ const Projects2: FC = () => {
           image {
             childImageSharp {
               gatsbyImageData(
-                formats: AUTO
                 layout: FIXED
                 placeholder: BLURRED
+                formats: AUTO
               )
             }
           }
-          image2 {
+          imageBg {
             childImageSharp {
               gatsbyImageData(
-                formats: AUTO
-                layout: FULL_WIDTH
                 placeholder: BLURRED
+                layout: FULL_WIDTH
+                quality: 100
               )
             }
           }
-          description
+          imageBgMob {
+            childImageSharp {
+              gatsbyImageData(
+                placeholder: BLURRED
+                layout: FULL_WIDTH
+                quality: 100
+              )
+            }
+          }
 
+          description
           articleLinks {
             href
             text
@@ -101,12 +115,21 @@ const Projects2: FC = () => {
   const renderProjects = nodes?.map((node: ProjectsItem, idx: number) => {
     console.log("🚀 ~ renderProjects ~ node:", node);
     const imgIcon = getImage(node.image);
-    const imgBg = getImage(node.image2);
+    const imgBgWithMedia = withArtDirection(getImage(node.imageBgMob), [
+      {
+        media: "(min-width: 769px)",
+        image: getImage(node.imageBg),
+      },
+    ]);
 
     return (
       <div key={idx} className="item-apps">
         <div className="item-apps__bg">
-          <GatsbyImage image={imgBg} alt={node.title} />
+          <GatsbyImage
+            image={imgBgWithMedia}
+            alt={node.title}
+            className={"page-img"}
+          />
         </div>
         <div className="item-apps__content">
           <div className="item-apps__text">
