@@ -10,6 +10,8 @@ import { FooterComponent } from "../../components/common/Footer/Footer";
 // import animationData from "../../lotties/video-preloader.json";
 
 import { CookiesComponent } from "../../components/common/Cookies/Cookies";
+import { ModalComponent } from "../../components/common/Modal/Modal";
+import { Form } from "../../components/common/Form/Form";
 
 const Layout = ({ children }) => {
   // const [loading, setLoading] = useState(false);
@@ -59,7 +61,11 @@ const Layout = ({ children }) => {
         <main className="page">{children}</main>
         <FooterComponent />
       </div>
+      <ModalComponent />
       <CookiesComponent />
+      <div className="b24">
+        <Form />
+      </div>
     </>
   );
 };

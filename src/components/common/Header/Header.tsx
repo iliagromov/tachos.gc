@@ -2,10 +2,10 @@ import React, { FC, useCallback, useState } from "react";
 import cn from "classnames";
 import { ReactSVG } from "react-svg";
 import { useStaticQuery, graphql, Link, navigate } from "gatsby";
-
+import { useDispatch } from "react-redux";
 import "./Header.sass";
 import { getScrollbarSize, toggleBodyScroll } from "../../../shared/utils";
-
+import { setModal } from "../../../store/User";
 // FIXME: вынести меню в компонент
 
 // Check if window is defined (so if in the browser or in node.js).
@@ -32,7 +32,7 @@ const HeaderComponent: FC = () => {
       }
     }
   `);
-
+  const dispatch = useDispatch();
   const [stateMenu, setState] = useState(false);
 
   const setMenuVisibility = (value: boolean) => {
@@ -57,6 +57,11 @@ const HeaderComponent: FC = () => {
   }, [stateMenu]);
 
   const menuTitle = stateMenu ? "На главную" : "Меню";
+
+  const handeClick = () => {
+    dispatch(setModal(true));
+  };
+
   return (
     <header className="header">
       <div className="wrapper">
@@ -96,7 +101,7 @@ const HeaderComponent: FC = () => {
           <div className="header__action">
             {/** FIXME: сделать в однну кнопку */}
             <div className="header__action_desktop">
-              <button className="page-btn" type="button">
+              <button className="page-btn" type="button" onClick={handeClick}>
                 Обсудить проект
               </button>
             </div>

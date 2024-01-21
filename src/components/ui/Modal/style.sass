@@ -1,0 +1,34 @@
+@import '../../../styles/imports'
+
+.ant-modal
+  color: inherit
+  font-size: inherit
+  line-height: inherit
+  font-feature-settings: normal
+  font-variant: normal
+
+  &-wrap,
+  &-mask
+    z-index: $zindex-modal !important
+
+  &-content
+    border-radius: 20px
+
+  &-body
+    font-size: inherit
+    line-height: inherit
+    padding: 40px 20px
+
+    +xs-block
+      padding: 70px 50px
+
+  &-close
+    color: #222222
+
+    &:hover
+      color: #ff472e
+
+  &-close-x
+    display: flex
+    align-items: center
+    justify-content: center
