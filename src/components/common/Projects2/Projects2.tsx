@@ -130,7 +130,12 @@ const Projects2: FC = () => {
     ]);
 
     return (
-      <div key={idx} className="item-apps">
+      <div
+        key={idx}
+        className={classNames("item-apps", {
+          ["js-open"]: expanded === `link${idx}`,
+        })}
+      >
         <div className="item-apps__bg">
           <GatsbyImage
             image={imgBgWithMedia}
@@ -138,14 +143,14 @@ const Projects2: FC = () => {
             className={"page-img"}
           />
         </div>
-        <div className="item-apps__content">
+        <div className={classNames("item-apps__content")}>
           <div className="item-apps__text">
             <div className="item-apps__icon">
               <GatsbyImage image={imgIcon} alt={node.title} />
             </div>
             <div className="item-apps__text-box">
               <div className="item-apps__title">{node.title}</div>
-              <div className="item-apps__descr">{node.subtitle}</div>
+              <div className="item-apps__subtitle">{node.subtitle}</div>
               <div className="item-apps__rate">
                 <Rate
                   allowHalf
@@ -157,12 +162,19 @@ const Projects2: FC = () => {
               </div>
             </div>
           </div>
+          <div
+            className="item-apps__descr"
+            dangerouslySetInnerHTML={{ __html: `${node.description}` }}
+          ></div>
           <div className="item-apps__stack">
             <div className="item-apps__stack-title">Стек технологий:</div>
-            <div className="item-apps__stack-text">{node.aboutStack}</div>
+            <div
+              className="item-apps__stack-text"
+              dangerouslySetInnerHTML={{ __html: `${node.aboutStack}` }}
+            ></div>
           </div>
           <div className="item-apps__add-links">
-            <div className="item-apps__add-links-title">О проекте пишут:</div>
+            <div className="item-apps__add-links-title">О проекте sпишут:</div>
             <ul className="item-apps__add-links-list">
               {node.articleLinks.map((link, i) => {
                 return (
@@ -211,7 +223,7 @@ const Projects2: FC = () => {
   });
 
   return (
-    <section className="projects">
+    <section className="projects" id="projects2">
       <div className="wrapper">
         <div className="page-title page-title-h1">Наши проекты</div>
         <div className="apps__list">{renderProjects}</div>

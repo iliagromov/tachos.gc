@@ -16,7 +16,7 @@ const ModalComponent: FC = () => {
     if (getB24) {
       if (refB24.current) refB24.current.appendChild(getB24);
     }
-  }, 500);
+  }, 200);
 
   return (
     <Modal

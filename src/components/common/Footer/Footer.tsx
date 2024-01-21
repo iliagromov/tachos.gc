@@ -6,7 +6,7 @@ type FooterProps = {};
 
 const FooterComponent: FC<FooterProps> = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="wrapper">
         <div className="footer__contacts">
           <div className="footer__contacts_req">

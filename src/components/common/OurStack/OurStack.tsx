@@ -1,8 +1,9 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { ReactSVG } from "react-svg";
 import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 
 import "./OurStack.sass";
+import classNames from "classnames";
 
 type StackItem = {
   title: string;
@@ -12,7 +13,6 @@ type StackItem = {
   };
 };
 const OurStackComponent: FC = () => {
-  // FIXME: сделать фабрику по созданию картинок
   const {
     allStacks: { nodes },
   } = useStaticQuery(graphql`
@@ -29,9 +29,20 @@ const OurStackComponent: FC = () => {
     }
   `);
 
+  const [expanded, setExpanded] = React.useState<string | boolean>("link0");
+
   const RenderItems = nodes.map((item: StackItem, idx: number) => {
     return (
-      <div className="our-stack-inner__item" key={idx}>
+      <div
+        className={classNames("our-stack-inner__item", {
+          ["isHovered"]:
+            (expanded === `link${idx}` ? true : false) ||
+            (expanded === false && idx === 0),
+        })}
+        key={idx}
+        onMouseOver={() => setExpanded(`link${idx}`)}
+        onMouseOut={() => setExpanded(false)}
+      >
         <div className="our-stack-inner__item-img">
           <div className="page-svg">
             <ReactSVG src={item.imageBg.publicURL} />
@@ -49,7 +60,7 @@ const OurStackComponent: FC = () => {
   });
 
   return (
-    <section className="our-stack" id="third">
+    <section className="our-stack" id="ourStack">
       <div className="wrapper">
         <div className="our-stack-inner">
           <div className="page-title page-title-h1">

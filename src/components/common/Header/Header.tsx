@@ -74,17 +74,17 @@ const HeaderComponent: FC = () => {
           <div className="header__nav">
             <div className="header__nav_desktop">
               <nav className="nav-menu">
-                <Link className="page-link" to="/">
+                <a className="page-link" href="#projects2">
                   Проекты
                   <span className="page-link_counter">{nodes.length}</span>
-                </Link>
-                <Link className="page-link" to={"/"}>
-                  Технологии{" "}
-                </Link>
+                </a>
+                <a className="page-link" href="#ourStack">
+                  Технологии
+                </a>
 
-                <Link className="page-link" to={"/"}>
-                  Контакты{" "}
-                </Link>
+                <a className="page-link" href="#footer">
+                  Контакты
+                </a>
               </nav>
             </div>
             <div className="header__nav_mobile">
@@ -118,19 +118,20 @@ const HeaderComponent: FC = () => {
               <div className="menu-inner">
                 <div className="menu__list">
                   <ul className={"menu-list"}>
-                    <Link className="page-link page-link_project" to="/">
+                    <a
+                      className="page-link page-link_project"
+                      href="#projects2"
+                    >
                       Проекты
-                      <span className="page-link_counter">10</span>
-                    </Link>
-                    <Link className="page-link" to={"/team"}>
-                      Команда{" "}
-                    </Link>
-                    <Link className="page-link" to={"/team"}>
-                      Услуги{" "}
-                    </Link>
-                    <Link className="page-link" to={"/team"}>
-                      Отзывы{" "}
-                    </Link>
+                      <span className="page-link_counter">{nodes.length}</span>
+                    </a>
+                    <a className="page-link" href="#ourStack">
+                      Технологии
+                    </a>
+
+                    <a className="page-link" href="#footer">
+                      Контакты
+                    </a>
                   </ul>
                 </div>
                 <div className="menu__footer">
