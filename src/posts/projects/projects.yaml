@@ -3,6 +3,7 @@
     category: projects
     url: project1
     date: "2022"
+    rating: 5
   imageBgMob: ../../images/project-1-bg-mob.png
   imageBg: ../../images/project-1-bg.png
   image: ../../images/project-1-app.png
@@ -28,6 +29,7 @@
     category: projects
     url: project2
     date: "2022"
+    rating: 4.8
   imageBgMob: ../../images/project-2-bg-mob.png
   imageBg: ../../images/project-2-bg.png
   image: ../../images/project-2-app.png
@@ -53,6 +55,7 @@
     category: projects
     url: project3
     date: "2022"
+    rating: 4.8
   imageBgMob: ../../images/project-3-bg-mob.png
   imageBg: ../../images/project-3-bg.png
   image: ../../images/project-3-app.png

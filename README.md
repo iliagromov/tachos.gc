@@ -11,15 +11,15 @@ for build
 ```
 shell
 
-
-rm -rf  ./icons/ ./page-data/  ./static/  \_gatsby/ \~partytown/
-
-rm *
-
 cd gatsby/
 
 yarn clean
 yarn build
+
+
+rm -rf  ./icons/ ./page-data/  ./static/  \_gatsby/ \~partytown/
+
+rm *
 
 cd ../
 

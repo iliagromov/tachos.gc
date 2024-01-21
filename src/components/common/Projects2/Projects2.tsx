@@ -5,8 +5,12 @@ import "./Projects2.sass";
 import { ReactSVG } from "react-svg";
 import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image";
 import classNames from "classnames";
+import Rate from "../../ui/Rate/Rate";
 
 type ProjectsItem = {
+  meta: {
+    rating: number;
+  };
   title: string;
   subtitle: string;
   image: {
@@ -63,6 +67,9 @@ const Projects2: FC = () => {
       }
       allProjects {
         nodes {
+          meta {
+            rating
+          }
           title
           subtitle
           image {
@@ -139,6 +146,15 @@ const Projects2: FC = () => {
             <div className="item-apps__text-box">
               <div className="item-apps__title">{node.title}</div>
               <div className="item-apps__descr">{node.subtitle}</div>
+              <div className="item-apps__rate">
+                <Rate
+                  allowHalf
+                  className={"ant-rate-custom"}
+                  defaultValue={node.meta.rating}
+                  disabled
+                />
+                <div className="item-apps__rate-count">{node.meta.rating}</div>
+              </div>
             </div>
           </div>
           <div className="item-apps__stack">
