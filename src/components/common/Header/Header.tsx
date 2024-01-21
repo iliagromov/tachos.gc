@@ -134,7 +134,11 @@ const HeaderComponent: FC = () => {
                   </ul>
                 </div>
                 <div className="menu__footer">
-                  <button className="page-btn" type="button">
+                  <button
+                    className="page-btn"
+                    type="button"
+                    onClick={handeClick}
+                  >
                     Обсудить проект
                   </button>
                 </div>
